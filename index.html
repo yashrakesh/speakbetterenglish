@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speak Better English</title>
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="English Coach" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>Speak Better English</h1>
+      <p>Practice directly here. Type or speak, get corrections, and see the exact mistakes fixed.</p>
+      <button id="installBtn" class="btn btn-install" type="button" hidden>Install App</button>
+    </section>
+
+    <section id="chat" class="chat" aria-live="polite"></section>
+
+    <form id="composer" class="composer">
+      <label for="userInput" class="sr-only">Type your sentence</label>
+      <textarea
+        id="userInput"
+        rows="3"
+        placeholder="Say something you would speak in office or interviews..."
+        required
+      ></textarea>
+      <div class="actions">
+        <button id="sendBtn" class="btn btn-primary" type="submit">Coach Me</button>
+        <button id="voiceBtn" class="btn btn-secondary" type="button">Speak</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
